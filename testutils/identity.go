@@ -21,11 +21,11 @@ func GenerateValidIdentityUsingStandardHumanAttributes(client protocol.IdentityS
 		IdentityPublicKey:encoding.Encode(persona.IdentityPublicKey),
 	}
 
-	givenNameAttr, givenNameAttest := utils.GenerateValidSelfAttestedAttribute(&persona.DevicePublicKey, &persona.DevicePrivateKey, "given_name", "Given Name/First Name", "TestFirstName", validIdentityAddress)
+	givenNameAttr, givenNameAttest := GenerateValidSelfAttestedAttribute(persona.DevicePublicKey, persona.DevicePrivateKey, "given_name", "Given Name/First Name", "TestFirstName", validIdentityAddress)
 	validIdentity.Attributes["given_name"] = &givenNameAttr
 	validIdentity.Attestations = append(validIdentity.Attestations, &givenNameAttest)
 
-	surNameAttr, surNameAttest := utils.GenerateValidSelfAttestedAttribute(&persona.DevicePublicKey, &persona.DevicePrivateKey, "sur_name", "Surname/Family Name", "TestSurFamilyName", validIdentityAddress)
+	surNameAttr, surNameAttest := GenerateValidSelfAttestedAttribute(persona.DevicePublicKey, persona.DevicePrivateKey, "sur_name", "Surname/Family Name", "TestSurFamilyName", validIdentityAddress)
 	validIdentity.Attributes["sur_name"] = &surNameAttr
 	validIdentity.Attestations = append(validIdentity.Attestations, &surNameAttest)
 

@@ -8,19 +8,17 @@ import (
 	"os"
 )
 
-var _ = Describe("DeviceRegistration", func() {
+var _ = Describe("Device Registration", func() {
 
 
-	Context("Using Valid Device Info", func() {
+	Context("Using Valid DeviceInfo", func() {
 
-		var identityServiceHost string = os.Getenv("DATUMCHI_IDENTITY_SERVICE_HOST")
-		var identityServicePort string = os.Getenv("DATUMCHI_IDENTITY_SERVICE_PORT")
+		identityServiceAddr := fmt.Sprintf("%s:%s", os.Getenv("DATUMCHI_IDENTITY_SERVICE_HOST"), os.Getenv("DATUMCHI_IDENTITY_SERVICE_PORT"))
+		persona := testutils.EstablishValidStandardHumanPersona(identityServiceAddr, "alpha.datumchi.com")
 
 
 		It("Device registers itself with the Identity Service using valid data and authenticates successfully", func(){
 
-			addr := fmt.Sprintf("%s:%s", identityServiceHost, identityServicePort)
-			persona := testutils.EstablishValidStandardHumanPersona(addr, "alpha.datumchi.com")
 			Expect(len(persona.AuthTokens)).To(Equal(1))
 
 
