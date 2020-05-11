@@ -1,0 +1,5 @@
+➜  tools git:(master) ./tools domainkeygen developer.datumchi.com
+2020/05/10 17:15:56 *******DatumChi Tools*******
+2020/05/10 17:15:56 Public Key:   yM0gwEulrJWP/d58pOEdV7FsOKP4whGkEy43NBnLyiw
+2020/05/10 17:15:56 Private Key:  FQTi9prCyJRO5hZVJRwDml3lvKYMXGvwmmYcuxY7yxg
+2020/05/10 17:15:56 Signature:    OarcM/Dk3J9HVrTGWtXd4IoFu2w7+bQQviBcLZ96osLfszVfAPaMELHceQqabj/eDVynsrN0Z3WfSM6SC1aPCQ

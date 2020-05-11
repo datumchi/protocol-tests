@@ -14,7 +14,7 @@ var _ = Describe("Device Registration", func() {
 	Context("Using Valid DeviceInfo", func() {
 
 		identityServiceAddr := fmt.Sprintf("%s:%s", os.Getenv("DATUMCHI_IDENTITY_SERVICE_HOST"), os.Getenv("DATUMCHI_IDENTITY_SERVICE_PORT"))
-		persona := testutils.EstablishValidStandardHumanPersona(identityServiceAddr, "alpha.datumchi.com")
+		persona := testutils.EstablishValidStandardHumanPersona(identityServiceAddr, "developer.datumchi.com")
 
 
 		It("Device registers itself with the Identity Service using valid data and authenticates successfully", func(){
